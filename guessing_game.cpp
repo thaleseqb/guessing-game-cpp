@@ -20,7 +20,6 @@ int main() {
 
     defineDifficulty(&information, information.level_mode);
 
-    cout << "The secret number is: " << secret_number << endl;
     bool isEqual = information.attempts_number == information.aux_count;
 
     while (!information.isCorrect && !isEqual) {
