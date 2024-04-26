@@ -13,7 +13,7 @@ void greaterOrLower(int attempt, int attempts_number, int aux_count, bool condit
     if (condition) {
         cout << attempt << " is greater than the secret number" << endl;
     } else {
-        cout << attempt << " is greater than the secret number" << endl;
+        cout << attempt << " is lower than the secret number" << endl;
     }
 
     int diff = attempts_number - aux_count;

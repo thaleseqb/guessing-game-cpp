@@ -19,7 +19,7 @@ int main() {
     });
 
     defineDifficulty(&information, information.level_mode);
-
+    
     bool isEqual = information.attempts_number == information.aux_count;
 
     while (!information.isCorrect && !isEqual) {
