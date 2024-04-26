@@ -34,11 +34,12 @@ int main() {
             greaterOrLower(information.attempt, information.attempts_number, information.aux_count, true);
         } else {
             greaterOrLower(information.attempt, information.attempts_number, information.aux_count, false);
-        }
+        } 
         isLost = information.aux_count == information.attempts_number;
+        if (isLost) {
+            cout << "You loose, more luck in a next time !" << endl;
+        }
         information.aux_count++;
     }
-
-    cout << "You loose, more luck in a next time !" << endl;
     return 0;
 }
