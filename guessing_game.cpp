@@ -19,11 +19,12 @@ int main() {
     });
 
     defineDifficulty(&information, information.level_mode);
-    
-    bool isEqual = information.attempts_number == information.aux_count;
 
-    while (!information.isCorrect && !isEqual) {
-    
+    bool isEqual = information.attempts_number == information.aux_count;
+    bool isLost = false;
+
+    while ((!information.isCorrect && !isEqual) && !isLost) {
+
         chooseNumber(&information);
 
         if (information.attempt == secret_number) {
@@ -34,7 +35,10 @@ int main() {
         } else {
             greaterOrLower(information.attempt, information.attempts_number, information.aux_count, false);
         }
+        isLost = information.aux_count == information.attempts_number;
         information.aux_count++;
     }
+
+    cout << "You loose, more luck in a next time !" << endl;
     return 0;
 }
