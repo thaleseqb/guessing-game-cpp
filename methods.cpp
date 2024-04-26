@@ -50,7 +50,7 @@ void printHeader() {
 void difficultyHeader() {
     cout << "Choose a difficulty level\n\n" << endl;
     cout << "The game offers 3 difficulty levels:\n" << endl;
-    cout << "* Ease, Medium and Hard, choose one ! *" << endl;
+    cout << "* Easy, Medium and Hard, choose one ! *" << endl;
 }
 
 int generateRandomNumber() {
