@@ -9,7 +9,7 @@ struct info {
     int attempt;
     string level_mode;
     map<string, int> level_definer = {
-        {"ease",1},
+        {"easy",1},
         {"medium",2},
         {"hard",3}
     };
