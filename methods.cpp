@@ -1,4 +1,3 @@
-using namespace std;
 #include <iostream>
 #include <random>
 #include <time.h>
@@ -7,25 +6,26 @@ using namespace std;
 #include "header_methods.h"
 
 void greaterOrLower(int attempt, int attempts_number, int aux_count, bool condition) {
-    cout << "Your attempt was wrong, but don't resign yet, try again !" << endl;
-    cout << "******************************************" << endl;
+    
+    std::cout << "Your attempt was wrong, but don't resign yet, try again !" << std::endl;
+    std::cout << "******************************************" << std::endl;
     
     if (condition) {
-        cout << attempt << " is greater than the secret number" << endl;
+        std::cout << attempt << " is greater than the secret number" << std::endl;
     } else {
-        cout << attempt << " is lower than the secret number" << endl;
+        std::cout << attempt << " is lower than the secret number" << std::endl;
     }
 
     int diff = attempts_number - aux_count;
-    cout << "Only " << diff << " attempts remains" << endl;
+    std::cout << "Only " << diff << " attempts remains" << std::endl;
 }
 
 void selectLevelMode(GETINFO *map) {
     
-    cin >> map->level_mode;
+    std::cin >> map->level_mode;
 }
 
-void defineDifficulty(GETINFO *map, string level_mode) {
+void defineDifficulty(GETINFO *map, std::string level_mode) {
     switch (map->level_definer[level_mode]) {
         case 2:
         map->attempts_number = 10;
@@ -42,15 +42,15 @@ void defineDifficulty(GETINFO *map, string level_mode) {
 }
 
 void printHeader() {
-    cout << "********************************" << endl;
-    cout << "* Welcome to the guessing game *" << endl;
-    cout << "********************************" << endl;
+    std::cout << "********************************" << std::endl;
+    std::cout << "* Welcome to the guessing game *" << std::endl;
+    std::cout << "********************************" << std::endl;
 }
 
 void difficultyHeader() {
-    cout << "Choose a difficulty level\n\n" << endl;
-    cout << "The game offers 3 difficulty levels:\n" << endl;
-    cout << "* Easy, Medium and Hard, choose one ! *" << endl;
+    std::cout << "Choose a difficulty level\n\n" << std::endl;
+    std::cout << "The game offers 3 difficulty levels:\n" << std::endl;
+    std::cout << "* Easy, Medium and Hard, choose one ! *" << std::endl;
 }
 
 int generateRandomNumber() {
@@ -63,15 +63,15 @@ int generateRandomNumber() {
 }
 
 void printInit() {
-    cout << "******************************************" << endl;
-    cout << "Now you can write your attmept in terminal" << endl;
-    cout << "******************************************" << endl;
+    std::cout << "******************************************" << std::endl;
+    std::cout << "Now you can write your attmept in terminal" << std::endl;
+    std::cout << "******************************************" << std::endl;
 }
 
 void chooseNumber(GETINFO *map) {
-    cout << "******************************************" << endl;
-    cout << "Choose a number for your attempt" << endl;
-    cin >> map->attempt;
-    cout << "******************************************" << endl;
-    cout << "The value of your attempt is: " << map->attempt << endl;
+    std::cout << "******************************************" << std::endl;
+    std::cout << "Choose a number for your attempt" << std::endl;
+    std::cin >> map->attempt;
+    std::cout << "******************************************" << std::endl;
+    std::cout << "The value of your attempt is: " << map->attempt << std::endl;
 }
